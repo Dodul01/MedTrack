@@ -1,0 +1,26 @@
+.body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.font-dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+}
+
+.light-citrus {
+    color: #0ba3a8;
+}
+
+.bg-citrus {
+    background-color: #0ba3a8;
+}
+
+.dark-wakame-green {
+    color: #00666f;
+}
+
+.bg-wakame-green {
+    background: #00666f;
+}
