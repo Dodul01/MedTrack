@@ -3,15 +3,15 @@ import { Outlet } from 'react-router-dom'
 import SideNav from './Components/SideNav/SideNav';
 import { useState } from 'react';
 import Nav from './Components/Nav/Nav';
+import useAppContext from './hooks/useAppContext';
 
 function App() {
-  const [theme, setTheme] = useState('dark');
-
+  const { theme } = useAppContext();
   return (
-    <div className={`${theme === 'dark' ? 'bg-[#1F2A3D] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-[#1A2537]'} flex min-h-screen min-w-screen`}>
+    <div className={`${theme === true ? 'bg-[#1F2A3D] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-[#1A2537]'} transition-all ease-in-out duration-150 flex min-h-screen min-w-screen`}>
       <SideNav />
       <div>
-        <Nav theme={theme} />
+        <Nav />
         <Outlet />
       </div>
     </div>
