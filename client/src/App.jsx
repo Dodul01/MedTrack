@@ -10,9 +10,11 @@ function App() {
   return (
     <div className={`${theme === true ? 'bg-[#1F2A3D] text-[#FFFFFF]' : 'bg-[#FFFFFF] text-[#1A2537]'} transition-all ease-in-out duration-150 flex min-h-screen min-w-screen`}>
       <SideNav />
-      <div>
+      <div className='flex-1'>
         <Nav />
-        <Outlet />
+        <div className='p-4 min-h-screen'>
+          <Outlet />
+        </div>
       </div>
     </div>
   )

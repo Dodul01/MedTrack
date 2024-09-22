@@ -5,6 +5,12 @@ import Sell from '../Pages/Sell/Sell';
 import Contacts from '../Pages/Contacts/Contacts';
 import Products from '../Pages/Products/Products';
 import Purchases from '../Pages/Purchases/Purchases';
+import Expenses from '../Pages/Expenses/Expenses';
+import Accounting from '../Pages/Accounting/Accounting';
+import Reports from '../Pages/Reports/Reports';
+import Settings from '../Pages/Settings/Settings';
+import SellPage from '../Pages/Sell/Pages/SellPage/SellPage';
+import AllSell from '../Pages/Sell/Pages/AllSell/AllSell';
 
 const router = createBrowserRouter([
     {
@@ -17,7 +23,17 @@ const router = createBrowserRouter([
             },
             {
                 path: '/sell',
-                element: <Sell />
+                element: <Sell />,
+                children: [
+                    {
+                        path: '/sell',
+                        element: <SellPage />
+                    },
+                    {
+                        path: '/sell/allSell',
+                        element: <AllSell />
+                    }
+                ]
             },
             {
                 path: '/contacts',
@@ -30,6 +46,22 @@ const router = createBrowserRouter([
             {
                 path: '/purchases',
                 element: <Purchases />
+            },
+            {
+                path: '/expenses',
+                element: <Expenses />
+            },
+            {
+                path: '/accounting',
+                element: <Accounting />
+            },
+            {
+                path: '/reports',
+                element: <Reports />
+            },
+            {
+                path: '/settings',
+                element: <Settings />
             }
         ]
     }
